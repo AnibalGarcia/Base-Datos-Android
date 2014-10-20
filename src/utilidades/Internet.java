@@ -24,7 +24,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
 
-public final class Internet {
+public class Internet {
 
 	/**
 	 * @brief	Verifica si el dispositivo dispone de conexión a Internet.

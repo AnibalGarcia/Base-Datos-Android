@@ -36,7 +36,7 @@ import java.util.logging.Logger;
 import utilidades.Internet;
 
 
-public final class BaseDatosMySQL extends BaseDatos {
+public class BaseDatosMySQL extends BaseDatos {
 
 	/// Contexto de la actividad o servicio que accede a la base de datos.
 	private final Context contexto;
@@ -66,6 +66,7 @@ public final class BaseDatosMySQL extends BaseDatos {
 	 * @param	in	base_datos Nombre de la base de datos.
 	 * @param	in	usuario Nombre de usuario de acceso a la base de datos.
 	 * @param	in	contrasena Contraseña de acceso a la base de datos.
+	 * @note	La conexión a la base de datos se realiza en una hebra auxiliar.
 	 * @see		registrarDriver()
 	 * @see		establecerConexion()
 	 */
@@ -180,6 +181,7 @@ public final class BaseDatosMySQL extends BaseDatos {
 	 * @return	Un ArrayList de arrays de String con el resultado de la consulta; null en caso de que no produzca resultado.
 	 * @post	La conexión a la base de datos puede ser reestablecida modificando el atributo "conexion".
 	 * @note	Detalles del valor devuelto por el método: cada elemento del ArrayList (un array de String) representa un registro devuelto por la consulta, y cada elemento de este un campo del registro.
+	 * @note	La conexión a la base de datos se realiza en una hebra auxiliar.
 	 * @see		realizarConsulta(String)
 	 * @see		establecerConexion()
 	 * @see		cerrarConexion()
